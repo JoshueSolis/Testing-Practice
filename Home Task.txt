@@ -1,0 +1,119 @@
+HOME TASK
+Write 8 scenarios (Test cases) in the Gherkin syntax Using Trello site. Each scenario must contain at least 4 steps.
+The required Keywords for each scenario must be:
+Scenario: ......
+Given ......
+When ......
+Then.......
+
+Recommendation:
+These scenarios should relate to following areas: Sign up/Sign in, Edit user profile, Create a board, Search for a board, Create a list, Create a card, Card filtering, Edit Workspace.
+
+
+Evaluation criteria (pass rate is 70%)
+Here’s the list of actions which result in reduction of overall mark for a completed task:
+Less than 8 scenarios are written (- 1 scenario = – 15%)
+Not all required keywords used (scenario with mistakes = – 5%)
+Scenario with antipatterns (scenario with mistakes = – 5%)
+
+//////////////////////////////////////////////////////////////////////////////
+1
+
+Scenario: User signs up succesfully in Trello
+
+GIVEN a new user is on the trello sign up page.
+WHEN they provide valid registration details including unique email, username, and password
+AND they agree to the terms and conditions.
+AND they click on the "sign-up" button.
+THEN they should receive a confirmation email from Trello.
+
+
+2
+
+Scenario: User logs in succesfully in Trello.
+
+GIVEN the user is in the trello log in page.
+WHEN they enter their valid credentials (email/password).
+AND they click on the "login" button.
+THEN they should be redirected to their Trello dashbord.
+
+
+3
+
+Scenario: User wants to change their Trello username.
+
+GIVEN the user is loged in their Trello account
+WHEN they navigate to their profile and visibility settings page
+AND edit the Username field with a new value.
+AND Save the changes
+THEN their Username should be updated in their Trello profile
+
+
+4
+
+Scenario: User creates a new board in Trello.
+
+GIVEN the user is loged in to their Trello account.
+AND the user is on their Trello dashboard.
+WHEN they click on the on the "Create a new board" button.
+THEN user enters an aunique name for the board
+AND they choose the board´s visibility settings.
+WHEN user clicks the "create" button.
+THEN a new board should be created with the specified name.
+AND the user should be redirected to the new board´s page.
+
+
+5
+
+Scenario: User creates a new list in a Trello board.
+
+GIVEN the user is loged in to their Trello account.
+AND the user is on a Trello board.
+AND the board contains existing lists.
+WHEN they clicks on the "Add another list" button.
+THEN they Enter an unique name for the list.
+AND they clicks the "Add list" button.
+THEN a new list should be created with the specified name.
+AND the list should be displayed on the Trello board.
+
+
+6
+
+Scenario: User creates a new card in a Trello list.
+
+GIVEN the user is loged in to their Trello account.
+AND the user is on a Trello board.
+AND the board contains existing lists.
+WHEN they clicks the "Add a card" button in any existing list.
+AND they enter a title for the card.
+AND they clicks the "Add card" button.
+THEN a new card should be created with the specified title.
+AND the card should be displayed in the selected list.
+
+
+
+7
+
+Scenario: User assigns a member for a card in Trello.
+
+GIVEN the user is logen in to their Trello account.
+AND the user is viewing a Trello board with lists and cards.
+WHEN they open a card details.
+AND they clicks the "Change memebers" option.
+THEN user select a board memeber for the card.
+AND click the "Save" button.
+THEN the card should be reasigned to the newly selected memeber.
+AND the members asigned to this card must appear on it. 
+
+
+8
+
+Scenario: User filters cards by assigned user in Trello.
+
+GIVEN the user is loged in to their Trello account.
+AND the user is viewing a Trello board with lists and cards on it.
+AND at least one card is asigned to a user.
+WHEN the user clicks the "Filters" Button.
+AND they select a specific user from the filter options.
+THEN only the assigned cards to the specific user should be displayed.
+AND other cards assigned to different users should be hidden.
